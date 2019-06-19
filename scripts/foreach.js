@@ -3,6 +3,8 @@
 // It details the address, purchasing agent, and the
 // total dollar amount of that company's last 5 orders.
 
+import {nyDOM} from "./filter.js";
+
 const businesses = [
   {
     purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
@@ -116,16 +118,22 @@ const businesses = [
   }
 ];
 
-const poop = document.querySelector('#active-businesses');
+const container = document.querySelector('#active-businesses');
+
+
 
 const businessesDOM = () => {
   businesses.forEach(business => {
-    poop.innerHTML +=
+    container.innerHTML +=
     `<h3>${business.companyName}</h3>
     <p>${business.addressFullStreet}</p>
     <p><span>${business.addressCity}</span>, <span>${business.addressStateCode}</span> <span>${business.addressZipCode}</span></p><hr/>`;
   });
+  document.querySelector('.btn-ny').addEventListener("click", () => {
+    nyDOM;
+  });
 };
+
 
 
 export {businessesDOM};
