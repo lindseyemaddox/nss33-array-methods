@@ -117,18 +117,14 @@ const businesses = [
 ];
 
 const poop = document.querySelector('#active-businesses');
-const soop = document.querySelector('#foreach');
 
-const businessesDOM = (business) => {
+const businessesDOM = () => {
   businesses.forEach(business => {
     poop.innerHTML +=
-
-  `
-    <h3>${business.companyName}</h3>
+    `<h3>${business.companyName}</h3>
     <p>${business.addressFullStreet}</p>
     <p><span>${business.addressCity}</span>, <span>${business.addressStateCode}</span> <span>${business.addressZipCode}</span></p><hr/>`;
-});
-  soop.toggleAttribute(poop),true;
+  });
 };
 
 
