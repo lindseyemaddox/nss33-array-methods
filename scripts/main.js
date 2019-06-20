@@ -1,11 +1,13 @@
+
 import {businessesDOM} from "./foreach.js";
+import {yorkies} from "./filter.js";
 
-let clicker = document.querySelector('.btn');
-
-clicker.addEventListener("click", () => {
-  clicker.textContent = 'Get NY Businesses Only';
-  clicker.classList.add("btn-ny");
+let btnAll = document.querySelector('#btn-all');
+btnAll.addEventListener("click", () => {
   businessesDOM();
-  removeClass("btn");
 });
 
+let btnNy = document.querySelector('#btn-ny');
+btnNy.addEventListener("click", () => {
+  yorkies();
+});
